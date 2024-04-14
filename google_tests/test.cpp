@@ -15,10 +15,10 @@ void testLogic(const string username, const string password, const string expect
 
     cout.rdbuf(coutBuffer);
 
-    // Check that we got the expected error message
+    // Check that we got the expected output message
     ASSERT_EQ(capturedOutput.str(), expectedOutput);
 
-    // Check that database size has not changed
+    // Check that database size has / hasn’t changed
     int newDatabaseSize = database.UsersTable.size();
 
     if (!success) {
